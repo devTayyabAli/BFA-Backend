@@ -36,14 +36,14 @@ const getUserById = async (req, res) => {
 const createUser = async (req, res) => {
   try {
     const { name,FatherName,cnicNo,noOfForm, email,totalBirds,tehsil,district,phoneNumber,cellNO,permanentResidency,businessResidency,Qualification } = req.body;
-    const existingUser = await User.findOne({ email });
-    console.log("existingUser",existingUser);
-    if (existingUser) {
-      return res.status(201).json({
-        error: true,
-        error_msg: "Email already exists",
-      });
-    }
+    // const existingUser = await User.findOne({ email });
+    // console.log("existingUser",existingUser);
+    // if (existingUser) {
+    //   return res.status(201).json({
+    //     error: true,
+    //     error_msg: "Email already exists",
+    //   });
+    // }
 
 
     // Create a new User instance with the hashed password
@@ -61,8 +61,6 @@ const createUser = async (req, res) => {
       noOfForm:noOfForm,
       cnicNo:cnicNo,
       FatherName:FatherName,
-
-
 
     });
 
