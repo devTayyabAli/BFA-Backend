@@ -16,4 +16,11 @@ router.put("/:id", userController.updateUser);
 // Route for deleting a specific employee by ID
 router.delete("/:id", userController.deleteUser);
 
+
+
+router.post("/register", userController.register);
+router.post("/LogIn", userController.LogIn);
+
+
+
 module.exports = router;
