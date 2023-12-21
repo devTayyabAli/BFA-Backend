@@ -18,8 +18,6 @@ router.delete("/:id", userController.deleteUser);
 
 
 
-router.post("/register", userController.register);
-router.post("/LogIn", userController.LogIn);
 
 
 
