@@ -17,7 +17,6 @@ app.get('/', async(req,res)=>{
     res.send("Server is Runing fine")
 })
 
-// console.log("Database url", process.env.DATABASE_URL);
 mongoose
   .connect(process.env.DATABASE_URL, { useNewUrlParser: true })
 
